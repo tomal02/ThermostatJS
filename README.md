@@ -30,7 +30,7 @@ https://github.com/jasmine/jasmine-browser.
 }
 ```
 
-- To start server run `npx jasmine-browser-runner server`
+- To start server run `npx jasmine-browser-runner serve`
 
 Emphasis on:
 
