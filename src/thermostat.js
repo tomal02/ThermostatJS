@@ -8,4 +8,7 @@ class Thermostat {
   up(change) {
     this.temperature += change;
   }
+  down(change) {
+    this.temperature -= change;
+  }
 }
