@@ -9,4 +9,8 @@ describe("Thermostat", function () {
     thermostat.up(10);
     expect(thermostat.getTemp()).toBe(30);
   });
+  it("Temperature can be decreased", function () {
+    thermostat.down(5);
+    epect(thermostat.getTemp()).toBe(15);
+  });
 });
