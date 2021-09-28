@@ -5,4 +5,7 @@ class Thermostat {
   getTemp() {
     return this.temperature;
   }
+  up(change) {
+    this.temperature += change;
+  }
 }
