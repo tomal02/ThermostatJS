@@ -40,3 +40,5 @@ Note that when we refer to Javabuzz when we are instantiating our version of the
 javabuzz = new Javabuzz();
 This is non-negotiable and Javascript WILL be pedantic about it, so please for the sake of all that is good and holy, whenever referring to a class or method, put the bloody (); after the name, or we'll never hear the end of it.
 ```
+
+.
