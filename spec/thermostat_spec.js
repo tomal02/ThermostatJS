@@ -19,4 +19,16 @@ describe("Thermostat", function () {
       thermostat.down(1);
     }).toThrow("Can't lower temperature as would be below the minimum");
   });
+  describe("Power saving mode", function () {
+    it("Can toggle power saving mode", function () {
+      expect(thermostat.powerSaving).toBe(true);
+      thermostat.togglePS();
+      expect(thermostat.powerSaving).toBe(false);
+    });
+    it("Changes maximum temperature when toggling", function () {
+      expect(thermostat.maximum).toBe(25);
+      thermostat.togglePS();
+      expect(thermostat.maximum).toBe(32);
+    });
+  });
 });
