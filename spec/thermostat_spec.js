@@ -25,6 +25,20 @@ describe("Thermostat", function () {
     expect(thermostat.getTemp()).toBe(20);
   });
 
+  describe("Energy usage", function () {
+    it("Can return low-usage", function () {
+      thermostat.down(3);
+      expect(thermostat.energyUsage()).toBe("low-usage");
+    });
+    it("Can return mediun-usage", function () {
+      expect(thermostat.energyUsage()).toBe("medium-usage");
+    });
+    it("Can return high-usage", function () {
+      thermostat.up(6);
+      expect(thermostat.energyUsage()).toBe("high-usage");
+    });
+  });
+
   describe("Power saving mode", function () {
     it("Can toggle power saving mode", function () {
       expect(thermostat.powerSaving).toBe(true);
