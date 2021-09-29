@@ -1,3 +1,5 @@
+"use_strict";
+
 class Thermostat {
   constructor() {
     this.temperature = 20;
@@ -43,6 +45,14 @@ class Thermostat {
       return "medium-usage";
     } else {
       return "high-usage";
+    }
+  }
+
+  isPowerSavingOn() {
+    if (this.powerSaving === true) {
+      return true;
+    } else {
+      return false;
     }
   }
 }
