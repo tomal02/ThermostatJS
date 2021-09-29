@@ -19,6 +19,12 @@ describe("Thermostat", function () {
       thermostat.down(1);
     }).toThrow("Can't lower temperature as would be below the minimum");
   });
+  it("Temperature can be reset to 20", function () {
+    thermostat.up(5);
+    thermostat.reset();
+    expect(thermostat.getTemp()).toBe(20);
+  });
+
   describe("Power saving mode", function () {
     it("Can toggle power saving mode", function () {
       expect(thermostat.powerSaving).toBe(true);
