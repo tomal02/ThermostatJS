@@ -13,4 +13,10 @@ describe("Thermostat", function () {
     thermostat.down(5);
     expect(thermostat.getTemp()).toBe(15);
   });
+  it("Has a minimum temperature of 10", function () {
+    thermostat.down(10);
+    expect(function () {
+      thermostat.down(1);
+    }).toThrow("Can't lower temperature as would be below the minimum");
+  });
 });
