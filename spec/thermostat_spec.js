@@ -50,5 +50,8 @@ describe("Thermostat", function () {
       thermostat.togglePS();
       expect(thermostat.maximum).toBe(32);
     });
+    it("Can return the current mode", function () {
+      expect(thermostat.isPowerSavingOn()).toBe(true);
+    });
   });
 });
