@@ -31,4 +31,8 @@ class Thermostat {
       this.maximum = 25;
     }
   }
+
+  reset() {
+    this.temperature = 20;
+  }
 }
