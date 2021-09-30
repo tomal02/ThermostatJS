@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
         return response.json();
       })
       .then((data) => {
-        document.querySelector("#current-temperature").innerText =
-          data.main.temp;
+        document.querySelector("#current-temperature").innerText = data.main.temp;
+        document.querySelector("#city").innerText = `${city}`;
       });
   };
 
@@ -22,7 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const updatedTemp = () => {
     document.querySelector("#temperature").innerText = thermostat.temperature;
-    document.querySelector("#temperature").className = thermostat.energyUsage();
+    document.querySelector("body").className = thermostat.energyUsage();
+    document.querySelector("#temperature-up").className = thermostat.energyUsage();
+    document.querySelector("#temperature-down").className = thermostat.energyUsage();
+    document.querySelector("#temperature-reset").className = thermostat.energyUsage();
+    document.querySelector("#power-saving-toggle").className = thermostat.energyUsage();
+    document.querySelector("#submit-button").className = thermostat.energyUsage();
+
+
   };
 
   const thermostat = new Thermostat();
