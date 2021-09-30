@@ -12,11 +12,11 @@ class Thermostat {
     return this.temperature;
   }
 
-  up(change) {
+  up(change = 1) {
     this.temperature += change;
   }
 
-  down(change) {
+  down(change = 1) {
     if (this.temperature - change >= this.MINIMUM) {
       this.temperature -= change;
     } else {
