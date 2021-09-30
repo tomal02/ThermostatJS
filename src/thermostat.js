@@ -13,7 +13,11 @@ class Thermostat {
   }
 
   up(change = 1) {
-    this.temperature += change;
+    if (this.temperature + change <= this.maximum) {
+      this.temperature += change;
+    } else {
+      throw "Can't increase temperature as would be above the maximum";
+    }
   }
 
   down(change = 1) {
