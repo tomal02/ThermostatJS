@@ -2,21 +2,21 @@
 <html>
   <head>
     <title>Thermostat</title>
-    <body>
-      <section>
-        <h1 id="temperature" class="selectme"></h1>
-        <h2>bob</h2>
-        <h3 id="bob" class="notbob"></h3>
-        <p>
-          <button id="temperature-up">+</button>
-          <button id="temperature-down">-</button>
-          <button id="temperature-reset">reset</button>
-          Power saving mode is <span id="power-saving-status">ON</span>
-          <button id="power-saving-toggle">Toggle power-saving</button>
-        </p>
-      </section>
-      <script src="src/thermostat.js"></script>
-      <script src="src/interface.js"></script>
-    </body>
+    <link rel="stylesheet" type="text/css" href="./styles.css"/>
   </head>
+  <body>
+    <section>
+      <h1 id="temperature"></h1>
+      <h1>Current temperature: <span id="current-temperature"></span></h1>
+      <p>
+        <button id="temperature-up">+</button>
+        <button id="temperature-down">-</button>
+        <button id="temperature-reset">reset</button>
+        Power saving mode is <span id="power-saving-status">ON</span>
+        <button id="power-saving-toggle">Toggle power-saving</button>
+      </p>
+    </section>
+    <script src="src/thermostat.js"></script>
+    <script src="src/interface.js"></script>
+  </body>
 </html>
